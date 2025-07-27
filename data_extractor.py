@@ -12,13 +12,12 @@ llm = ChatGroq(
     max_retries=2,
 )
 
-def extract(article_text):
+def extract(article_text, keys):
     # In a real scenario, this function would use NLP to extract data.
     # For this example, it returns a fixed JSON object.
     prompt = '''
 From the below news article, extract revenue and eps in JSON format containing following keys: 
-'revenue_actual', 'revenue_actual', 'revenue_expected', 'eps_actual', 'eps_expected'
-
+{keys}
 Each value should have unit million or billion as part of value string
 
 Only return the valid JSON. No Premble.
@@ -29,7 +28,7 @@ Article
     pt = PromptTemplate.from_template(prompt)
 
     chain = pt | llm
-    response = chain.invoke({"article" : article_text})
+    response = chain.invoke({"article" : article_text, "keys": keys})
     response.content
 
     parser = JsonOutputParser()
