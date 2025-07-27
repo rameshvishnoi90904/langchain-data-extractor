@@ -1,0 +1,6 @@
+streamlit
+pandas
+langchain_groq
+langchain_core.prompts
+langchain_core.output_parsers
+langchain_core.exceptions
