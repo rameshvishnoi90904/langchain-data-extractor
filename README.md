@@ -30,8 +30,8 @@ streamlit run app.py
 
 ## Demo
 
-[Link to Live Demo](#)
+[Link to Live Demo](https://langchain-data-extractor-c3wcsusgmnsz4yq9ypddgi.streamlit.app/)
 
 ### Screenshot
 
-![Screenshot of the application](placeholder.png)
+![Screenshot of the application](![Dashboard preview](image.png))

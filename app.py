@@ -28,7 +28,7 @@ if st.session_state.get('extract_clicked'):
 st.title("Financial Data Extractor")
 
 # 2. Input box
-input_paragraph = st.text_area("Enter a paragraph")
+input_paragraph = st.text_area("Enter a paragraph from a news article", height=200)
 
 # 3. Button
 extract_button = st.button("Extract")
