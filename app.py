@@ -47,7 +47,7 @@ if st.sidebar.button("Add New Key"):
 # Create a list to store the keys
 keys = []
 for i in range(st.session_state.num_keys):
-    key = st.sidebar.text_input(f"Enter Key to be extracted {i+1}", key=f"key_{i}")
+    key = st.sidebar.text_input(f"Enter Key to be extracted {i+1}", key=f"key_{i}" ,placeholder="e.g., 'Revenue', 'Profit', 'Loss'")
     keys.append(key)
 
 # 4. Upon clicking the button, show a table
